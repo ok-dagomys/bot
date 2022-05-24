@@ -4,3 +4,12 @@
 [submodule "weather"]
 	path = weather
 	url = https://github.com/it-cio/weather
+[submodule "covid"]
+	path = covid
+	url = https://github.com/it-cio/covid
+[submodule "asterisk"]
+	path = asterisk
+	url = https://github.com/it-cio/asterisk
+[submodule "sql"]
+	path = sql
+	url = https://github.com/it-cio/sql
