@@ -13,3 +13,6 @@
 [submodule "sql"]
 	path = sql
 	url = https://github.com/it-cio/sql
+[submodule "phone"]
+	path = phone
+	url = https://github.com/ok-dagomys/phone
