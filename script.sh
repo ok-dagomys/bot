@@ -10,7 +10,7 @@ git pull
 echo ""
 
 echo "==> Update submodules from Git"
-git submodules update --remote
+git submodule update --remote
 echo ""
 
 echo "==> Check and update dependencies"
