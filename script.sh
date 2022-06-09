@@ -18,4 +18,4 @@ poetry run poetry update
 echo ""
 
 echo "==> Run server"
-poetry run main.py
+python3 main.py
