@@ -60,15 +60,18 @@ async def phonebook(greet):
 async def ami_listener():
     ami.connect(state=False)
     while True:
-        if ami.event:
-            logging.info(ami.event[0])
-            ami.event = []
-        elif ami.caller and ami.number:
-            call = await caller_recognition(ami.caller[0], ami.number[0])
-            call_id = await bot.send_message(call)
-            ami.number, ami.caller = [], []
-        elif ami.status:
-            await bot.delete_message(call_id)
-            bot.id_list.remove(call_id)
-            ami.status = []
-        await asyncio.sleep(0.1)
+        try:
+            if ami.event:
+                logging.info(ami.event[0])
+                ami.event = []
+            elif ami.caller and ami.number:
+                call = await caller_recognition(ami.caller[0], ami.number[0])
+                call_id = await bot.send_message(call)
+                ami.number, ami.caller = [], []
+            elif ami.status:
+                await bot.delete_message(call_id)
+                bot.id_list.remove(call_id)
+                ami.status = []
+            await asyncio.sleep(0.1)
+        except Exception as ex:
+            print(f'Aiogram Error: {ex}')
