@@ -14,7 +14,7 @@ git submodule update --remote
 echo ""
 
 echo "==> Check and update dependencies"
-python3 -m poetry update
+poetry update
 echo ""
 
 echo "==> Run server"
