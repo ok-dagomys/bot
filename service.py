@@ -74,4 +74,5 @@ async def ami_listener():
                 ami.status = []
             await asyncio.sleep(0.1)
         except Exception as ex:
-            print(f'Aiogram Error: {ex}')
+            print(f'Aiogram error: {ex}')
+            ami.status = []
