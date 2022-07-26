@@ -11,7 +11,7 @@ from weather.forecast import weather_request
 logging.basicConfig(level=logging.INFO)
 
 
-@bot.dp.message_handler(commands=['search'])
+@bot.dp.message_handler(commands=['?'])
 async def bot_answer(message: bot.types.Message):
     search = await name_recognition(message.text)
     await bot.send_message(search)
